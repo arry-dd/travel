@@ -1,8 +1,8 @@
 <template>
     <div id="header">
-        <div class="header-left"></div>
-        <div class="header-m">请输入景点</div>
-        <div class="header-right"></div>
+        <div class="header-left"><span class="iconfont back">&#xe624;</span></div>
+        <div class="header-m"><span class="iconfont search">&#xe632;</span>请输入景点</div>
+        <div class="header-right">上海<span class="iconfont">&#xe64a;</span></div>
     </div>
 </template>
 
@@ -14,15 +14,20 @@
 </script>
 
 <style scoped lang="less">
+    @import "~style/variable.less";
     #header {
         line-height: .86rem;
-        background-color: #00BCD4;
+        background-color: @baseColor;
         display: flex;
+        color: white;
         .header-left {
             width: .64rem;
             /*background-color: red;*/
             float: left;
             height: .86rem;
+            .back {
+                margin-left: .12rem;
+            }
         }
         .header-m {
             flex: 1;
@@ -35,12 +40,17 @@
             border-radius: .1rem;
             color: #ccc;
             line-height: .70rem;
+            .search {
+                margin-left: 0.3rem
+                ;
+            }
         }
         .header-right {
             height: .86rem;
             float: right;
             /*background-color: yellow;*/
             width: 1.24rem;
+            margin-left: .15rem;
         }
     }
 </style>

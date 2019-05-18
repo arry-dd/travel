@@ -10,6 +10,11 @@ import 'style/reset.css';
 //解决多像素的问题
 import 'style/border.css';
 
+//引入字体图标
+import 'style/iconfont.css'
+
+
+
 Vue.config.productionTip = false
 
 new Vue({
