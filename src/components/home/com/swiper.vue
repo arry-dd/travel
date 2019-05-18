@@ -2,7 +2,7 @@
 <div>
 
     <swiper :options="swiperOption" ref="mySwiper">
-        <swiper-slide v-for="(item,i) in img" :key="item.id">
+        <swiper-slide v-for="item in img" :key="item.id">
             <img class="swiper-img" :src="item">
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>

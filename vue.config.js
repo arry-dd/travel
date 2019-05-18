@@ -9,4 +9,5 @@ module.exports = {
             .set('home', resolve('src/components/home'))
             .set('style', resolve('src/assets/styles'))
     }
+
 }
