@@ -14,7 +14,6 @@ import 'style/border.css';
 import 'style/iconfont.css'
 
 
-
 Vue.config.productionTip = false
 
 new Vue({
