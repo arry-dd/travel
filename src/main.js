@@ -1,8 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
-import routerObj from './router.js'
+//引入router.js
+import routerObj from './router.js';
 
+//引入默认样式
+import 'style/reset.css';
+
+//解决多像素的问题
+import 'style/border.css';
 
 Vue.config.productionTip = false
 
