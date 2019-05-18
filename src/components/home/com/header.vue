@@ -1,8 +1,8 @@
 <template>
     <div id="header">
         <div class="header-left"><span class="iconfont back">&#xe624;</span></div>
-        <div class="header-m"><span class="iconfont search">&#xe632;</span>请输入景点</div>
-        <div class="header-right">上海<span class="iconfont">&#xe64a;</span></div>
+        <div class="header-m"><span class="iconfont search">&#xe632;</span>输入城市/景点/游玩主题</div>
+        <div class="header-right">广州<span class="iconfont">&#xe64a;</span></div>
     </div>
 </template>
 
@@ -20,6 +20,7 @@
         background-color: @baseColor;
         display: flex;
         color: white;
+        overflow: hidden;
         .header-left {
             width: .64rem;
             /*background-color: red;*/

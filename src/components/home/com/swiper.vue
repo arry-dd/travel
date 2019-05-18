@@ -1,6 +1,5 @@
 <template>
-<div>
-
+<div class="swiper-div">
     <swiper :options="swiperOption" ref="mySwiper">
         <swiper-slide v-for="item in img" :key="item.id">
             <img class="swiper-img" :src="item">
@@ -27,10 +26,10 @@
                     loop: true
                 },
                 img: {
-                    id1: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/d687a7b93c4a4e8d90ec11972b83eeba.jpg',
-                    id2: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/dea48ef2dcd47657b7c9ba303a1b81dd.jpg',
-                    id3: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/97d955c47f8f786440053515c3b2cee2.jpg',
-                    id4: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/6a43abe8ac960ffda86fcf81b20389ac.jpg'
+                    id1: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/60904fc24f223e0db5aee3c6148e641f.jpg_750x200_b1b90a19.jpg',
+                    id2: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg',
+                    id3: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/91ddace63382519afa002bd853d8df73.jpg_750x200_f24e65e8.jpg',
+                    id4: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/0c350b3cac9113a824db471b2024f8b7.jpg_750x200_8d21785a.jpg'
                 }
             }
         }
@@ -40,14 +39,24 @@
 </script>
 
 <style scoped lang="less">
-    img {
-        width: 100%;
+    .swiper-div /deep/.swiper-pagination-bullet-active {
+        background-color: white;
     }
-
+    img {
+            width: 100%;
+    }
+    .swiper-div{
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 29.25%;
+    }
 </style>
 
 <style>
-    .swiper-pagination-bullet-active {
-        background-color: white;
-    }
+        /*.swiper-pagination-bullet-active {*/
+        /*    background-color: white;*/
+        /*}*/
+
+
+
 </style>
