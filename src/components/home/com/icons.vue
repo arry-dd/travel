@@ -1,4 +1,5 @@
 <template>
+
     <div class="icons">
         <swiper class="icons-sw" :options="swiperOption" ref="mySwiper" >
             <swiper-slide v-for="(page,index) in pages" :key="index">
@@ -99,22 +100,23 @@
         }
     }
 </script>
+
 <style scoped lang="less">
-    @import "~style/variable.less";
-    .icons /deep/ .icon-pagination {
+        @import "~style/variable.less";
+        .icons /deep/ .icon-pagination {
             color: @baseColor;
             position: absolute;
             bottom: -12.5%;
-    }
-    .icons /deep/ .icons-sw {
-        overflow: visible!important;
-        position: relative;
-    }
-
-
-</style>
-<style scoped lang="less">
-
+        }
+        .icons /deep/ .icons-sw {
+            overflow: visible!important;
+            position: relative;
+        }
+        .icons {
+            height: 0;
+            padding-bottom: 57%;
+            background-color: #FFFFFF;
+        }
         .icon {
             /*overflow: hidden;*/
             float: left;

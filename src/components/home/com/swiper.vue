@@ -48,7 +48,7 @@
     .swiper-div{
         overflow: hidden;
         height: 0;
-        padding-bottom: 29.25%;
+        padding-bottom: 26.25%;
     }
 </style>
 
