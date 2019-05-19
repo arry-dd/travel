@@ -85,6 +85,7 @@
             }
         },
         computed: {
+        //计算图标需要的页数，八个图标为一页
             pages: function () {
                 let pages = [];
                 this.iconList.forEach((item,index) => {

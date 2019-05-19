@@ -4,6 +4,7 @@ function resolve (dir) {
 }
 module.exports = {
     lintOnSave: true,
+    //设置别名
     chainWebpack: (config)=>{
         config.resolve.alias
             .set('home', resolve('src/components/home'))

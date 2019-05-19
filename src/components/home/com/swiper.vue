@@ -22,7 +22,9 @@
         data() {
             return {
                 swiperOption: {
+                //设置轮播指标（即轮播图下方的圆点）
                     pagination: '.swiper-pagination',
+                    //设置是否可以循环轮播
                     loop: true
                 },
                 img: {
@@ -52,11 +54,3 @@
     }
 </style>
 
-<style>
-        /*.swiper-pagination-bullet-active {*/
-        /*    background-color: white;*/
-        /*}*/
-
-
-
-</style>

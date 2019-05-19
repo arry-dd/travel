@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
     export default {
         name: 'Position',
     }
@@ -29,5 +28,4 @@
             font-size: .32rem;
         }
     }
-
 </style>

@@ -122,7 +122,7 @@
         .recommend-info {
             box-sizing: border-box;
             height: 0;
-            padding: .25rem .25rem 55% .25rem;
+            padding: .25rem .25rem 50% .25rem;
             background-color: #FFFFFF;
             display: flex;
             border-bottom: 1px solid #EFEFEF;

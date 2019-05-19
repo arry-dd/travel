@@ -23,7 +23,7 @@ import 'style/border.css'
 import fastClick from 'fastclick';
 fastClick.attach(document.body);
 
-
+//阻止启动生产消息
 Vue.config.productionTip = false
 
 new Vue({
