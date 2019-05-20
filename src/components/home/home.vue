@@ -5,6 +5,7 @@
         <icons></icons>
         <position></position>
         <recommend></recommend>
+        <weekend></weekend>
     </div>
 </template>
 
@@ -14,7 +15,7 @@
     import Icons from 'home/com/icons.vue';
     import Recommend from 'home/com/recommend.vue';
     import Position from 'home/com/position.vue';
-
+    import Weekend from 'home/com/weekend.vue';
     export default {
         name: 'home',
         components: {
@@ -22,7 +23,8 @@
             Swiper,
             Icons,
             Position,
-            Recommend
+            Recommend,
+            Weekend
         }
     }
 </script>

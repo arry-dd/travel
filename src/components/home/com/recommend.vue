@@ -1,7 +1,7 @@
 <template>
     <div id="recommend">
         <div class="recommend-like"><span class="iconfont iconfont-love">&#xe85c;</span>猜你喜欢 </div>
-        <ul v-for="(item,index) in recommendList" :key="index">
+        <ul v-for="item in recommendList" :key="item.id">
             <li class="recommend-info">
                 <div class="recommend-img">
                     <img class="info-img" :src="item.imgUrl">
