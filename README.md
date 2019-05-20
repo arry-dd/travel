@@ -37,3 +37,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     }
     }
 </style>
+
+2.json文件不能有多余的逗号，不然会出错

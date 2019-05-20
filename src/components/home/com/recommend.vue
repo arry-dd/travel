@@ -39,68 +39,7 @@
 
     export default {
         name: 'Recommend',
-        data() {
-            return {
-                recommendList: [
-                    {
-                        id: 1,
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_200x200_ea02ef99.jpg',
-                        name: '长隆野生动物世界',
-                        price: '271.3',
-                        position: '广州长隆野生动物世界',
-                        desc: '熊猫三胞胎与您共享欢乐时光'
-                    },
-                    {
-                        id: 2,
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/3b/3bd311262ee06d8c90.img.jpg_200x200_c118d7da.jpg',
-                        name: '广州长隆旅游度假',
-                        price: '83.9',
-                        position: '番禺',
-                        desc: '《奔跑吧兄弟》取景地'
-                    },
-                    {
-                        id: 3,
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/d8/d89ab1a9b2ab355ba3.img.jpg_200x200_8fc1af97.jpg',
-                        name: '长隆水上乐园',
-                        price: '438',
-                        position: '广州长隆水上乐园',
-                        desc: '“巨蟒”滑道带给你肾上腺素的冲击'
-                    },
-                    {
-                        id: 4,
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/31/74eabd4dc95afd494d92a5006c9ad4f5.water.jpg_200x200_b27fe752.jpg',
-                        name: '美林湖温泉',
-                        price: '118',
-                        position: '花都区',
-                        desc: '远离喧嚣，彰显欧洲贵族气息'
-                    },
-                    {
-                        id: 5,
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/88/889ae02b07140066a3.img.jpg_200x200_d3b1427c.jpg',
-                        name: '长隆欢乐世界',
-                        price: '179',
-                        position: '广州长隆欢乐世界',
-                        desc: '爱挑战的你怎能错过垂直过山车'
-                    },
-                    {
-                        id: 6,
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/ee/ee3013caaa28ae7490.water.jpg_200x200_f052dfc4.jpg',
-                        name: '增城白水寨风景名胜区',
-                        price: '5435',
-                        position: '增城',
-                        desc: '奇趣水谷与天南第一梯'
-                    },
-                    {
-                        id: 7,
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/1c/1c67791edbe2677b90.img.jpg_200x200_ff903759.jpg',
-                        name: '珠江夜景',
-                        price: '188',
-                        position: '天河区',
-                        desc: '感受羊城夜景的美与魅'
-                    },
-                    ]
-            }
-        }
+        props: ["recommendList"]
     }
 </script>
 

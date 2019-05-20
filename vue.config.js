@@ -9,6 +9,16 @@ module.exports = {
         config.resolve.alias
             .set('home', resolve('src/components/home'))
             .set('style', resolve('src/assets/styles'))
+    },
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8080',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': '/data'
+                }
+            }
+        }
     }
-
 }

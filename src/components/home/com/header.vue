@@ -2,7 +2,7 @@
     <div id="header">
         <div class="header-left"><span class="iconfont back">&#xe624;</span></div>
         <div class="header-m"><span class="iconfont search">&#xe632;</span>输入城市/景点/游玩主题</div>
-        <div class="header-right">广州<span class="iconfont iconfont-arrows">&#xe64a;</span></div>
+        <div class="header-right">{{city}}<span class="iconfont iconfont-arrows">&#xe64a;</span></div>
     </div>
 </template>
 
@@ -10,6 +10,7 @@
 
     export default {
         name: 'HomeHeader',
+        props: ["city"]
     }
 </script>
 

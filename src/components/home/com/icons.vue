@@ -24,64 +24,12 @@
             swiper,
             swiperSlide
         },
+        props: ["iconList"],
         data() {
             return {
                 swiperOption: {
                     pagination: '.swiper-pagination'
-                },
-                iconList: [
-                    {
-                        id: 1,
-                        img: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                        desc: '景点门票'
-                    },
-                    {
-                        id: 2,
-                        img: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-                        desc: '广州必游'
-                    },
-                    {
-                        id: 3,
-                        img: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-                        desc: '动植物园'
-                    },
-                    {
-                        id: 4,
-                        img: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
-                        desc: '自然风光'
-                    },
-                    {
-                        id: 5,
-                        img: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-                        desc: '珠江夜游'
-                    },
-                    {
-                        id: 6,
-                        img: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
-                        desc: '长隆亲子月'
-                    },
-                    {
-                        id: 7,
-                        img: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                        desc: '一日游'
-                    },
-                    {
-                        id: 8,
-                        img: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/184e261814a5d07a5d3d08cd29cf590d.png',
-                        desc: '长隆度假区'
-                    },
-                    {
-                        id: 9,
-                        img: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/c032ae43b15a3dac34b5e07bb0e46850.png',
-                        desc: '广州塔'
-                    },
-                    {
-                        id: 10,
-                        img: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/bda58ffc3016edad84e656e8a94b0321.png',
-                        desc: '广州融创'
-                    }
-
-                ]
+                }
             }
         },
         computed: {
