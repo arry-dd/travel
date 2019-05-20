@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import axios from 'axios';
+    import axios from 'axios'
     import HomeHeader from  'home/com/header.vue';
     import Swiper from 'home/com/swiper.vue';
     import Icons from 'home/com/icons.vue';
@@ -25,7 +25,7 @@
                 city: "",
                 iconList: [],
                 recommendList: [],
-                weekendList:[]
+                weekendList: []
             }
         },
         components: {
@@ -36,7 +36,7 @@
             Recommend,
             Weekend
         },
-        mounted() {
+        created() {
             this.getData();
         },
         methods: {
