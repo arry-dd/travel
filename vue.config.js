@@ -10,6 +10,7 @@ module.exports = {
             .set('home', resolve('src/components/home'))
             .set('style', resolve('src/assets/styles'))
             .set('src', resolve('src'))
+            .set('city', resolve('src/components/city'))
     },
     devServer: {
         proxy: {
