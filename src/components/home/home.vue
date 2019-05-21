@@ -36,7 +36,7 @@
             Recommend,
             Weekend
         },
-        created() {
+        mounted() {
             this.getData();
         },
         methods: {
