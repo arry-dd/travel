@@ -8,8 +8,18 @@
                         <li v-for="value in hotCities" :key="value.id">{{value.name}}</li>
                     </ul></div>
             </div>
-            <alphabet :cities="cities"></alphabet>
-            <area1 :cities="cities"></area1>
+            <alphabet :cities="cities" @setAl="getAl"></alphabet>
+<!--            <area1 :cities="cities" :al="al"></area1>-->
+            <div>
+                <div class="sort-A" v-for="(val,key) in cities" :key="key" :ref="key">
+                    <div class="title">{{key}}</div>
+                    <div>
+                        <ul v-for="(item,i) in val" :key="i">
+                            <li>{{item.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -17,7 +27,6 @@
 <script>
     import Bscroll from 'better-scroll'
     import Alphabet from 'city/com/alphabet'
-    import Area1 from 'city/com/area'
     import axios from 'axios'
     export default {
         name: 'List',
@@ -27,7 +36,6 @@
         },
         components: {
             Alphabet,
-            Area1
         },
         methods: {
             getCityData() {
@@ -40,14 +48,25 @@
                     this.hotCities = data.hotCities;
                     this.cities = data.cities;
                 }
+            },
+            getAl(data) {
+                this.al = data;
             }
         },
         data() {
             return {
                 hotCities: [],
-                cities: {}
+                cities: {},
+                al: ''
+            }
+        },
+        watch: {
+        al() {
+            if(this.al) {
+                this.scroll.scrollToElement(this.$refs[this.al][0])
             }
         }
+    }
     }
 </script>
 
@@ -88,28 +107,28 @@
                 }
             }
         }
-        /*.sort-A {*/
-        /*     overflow: hidden;*/
-        /*     ul {*/
-        /*         li {*/
-        /*             height: .90rem;*/
-        /*             width: 33.3%;*/
-        /*             float: left;*/
-        /*             background-color: #fff;*/
-        /*             line-height: .9rem;*/
-        /*             text-align: center;*/
-        /*             box-sizing: border-box;*/
-        /*             border-bottom: 1px solid #DDDDDD;*/
-        /*             border-right: 1px solid #DDDDDD;*/
-        /*             &:nth-last-of-type(-n+3) {*/
-        /*                 margin-bottom: -1px;*/
-        /*             }*/
-        /*             &:nth-of-type(3n) {*/
-        /*                 border-right: 0px;*/
-        /*             }*/
-        /*         }*/
-        /*     }*/
-        /* }*/
+        .sort-A {
+             overflow: hidden;
+             ul {
+                 li {
+                     height: .90rem;
+                     width: 33.3%;
+                     float: left;
+                     background-color: #fff;
+                     line-height: .9rem;
+                     text-align: center;
+                     box-sizing: border-box;
+                     border-bottom: 1px solid #DDDDDD;
+                     border-right: 1px solid #DDDDDD;
+                     &:nth-last-of-type(-n+3) {
+                         margin-bottom: -1px;
+                     }
+                     &:nth-of-type(3n) {
+                         border-right: 0px;
+                     }
+                 }
+             }
+         }
     }
 
 </style>

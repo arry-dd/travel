@@ -2,7 +2,13 @@
     <div class="alphabet">
         <div class="title">字母排序</div>
         <ul class="al-detail">
-            <li v-for="(val,key) in cities" :key="key">{{key}}</li>
+            <li
+            v-for="(val,key) in cities"
+            :key="key"
+            @click="getKey"
+            >
+            {{key}}
+            </li>
         </ul>
     </div>
 
@@ -12,7 +18,12 @@
 <script>
     export default {
         name: 'Alphabet',
-        props: ['cities']
+        props: ['cities'],
+        methods: {
+            getKey(e) {
+                this.$emit('setAl',e.target.innerText);
+            }
+        }
     }
 </script>
 
