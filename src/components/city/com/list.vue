@@ -5,22 +5,11 @@
                 <div class="title">热门城市</div>
                 <div class="hot-city">
                     <ul>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
-                        <li>广州</li>
+                        <li v-for="value in hotCities" :key="value.id">{{value.name}}</li>
                     </ul></div>
             </div>
-            <alphabet></alphabet>
-            <area1></area1>
+            <alphabet :cities="cities"></alphabet>
+            <area1 :cities="cities"></area1>
         </div>
     </div>
 </template>
@@ -29,14 +18,35 @@
     import Bscroll from 'better-scroll'
     import Alphabet from 'city/com/alphabet'
     import Area1 from 'city/com/area'
+    import axios from 'axios'
     export default {
         name: 'List',
         mounted() {
-            this.scroll = new Bscroll(this.$refs.wrapper)
+            this.scroll = new Bscroll(this.$refs.wrapper);
+            this.getCityData();
         },
         components: {
             Alphabet,
             Area1
+        },
+        methods: {
+            getCityData() {
+                axios.get("api/city.json")
+                    .then(this.succ)
+            },
+            succ(ret) {
+                if(ret.data.ret == true) {
+                    const data = ret.data.data;
+                    this.hotCities = data.hotCities;
+                    this.cities = data.cities;
+                }
+            }
+        },
+        data() {
+            return {
+                hotCities: [],
+                cities: {}
+            }
         }
     }
 </script>

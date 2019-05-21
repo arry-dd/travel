@@ -2,29 +2,8 @@
     <div class="alphabet">
         <div class="title">字母排序</div>
         <ul class="al-detail">
-                    <li>A</li>
-                    <li>B</li>
-                    <li>C</li>
-                    <li>D</li>
-                    <li>E</li>
-                    <li>F</li>
-                    <li>G</li>
-                    <li>H</li>
-                    <li>J</li>
-                    <li>K</li>
-                    <li>L</li>
-                    <li>M</li>
-                    <li>N</li>
-                    <li>P</li>
-                    <li>Q</li>
-                    <li>R</li>
-                    <li>S</li>
-                    <li>T</li>
-                    <li>W</li>
-                    <li>X</li>
-                    <li>Y</li>
-                    <li>Z</li>
-                </ul>
+            <li v-for="(val,key) in cities" :key="key">{{key}}</li>
+        </ul>
     </div>
 
 
@@ -32,7 +11,8 @@
 
 <script>
     export default {
-        name: 'Alphabet'
+        name: 'Alphabet',
+        props: ['cities']
     }
 </script>
 
