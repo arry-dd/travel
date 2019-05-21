@@ -9,8 +9,10 @@
             <div class="header-selector">城市选择</div>
         </div>
         <div class="header-bottom">
-            <div class="header-bottom-left">境内</div>
-            <div class="header-bottom-right">境外·港</div>
+            <ul>
+                <li class="header-bottom-left">境内</li>
+                <li class="header-bottom-right">境外·港澳台</li>
+            </ul>
         </div>
     </div>
 </template>
@@ -52,14 +54,20 @@
         background-color: @baseColor;
             text-align: center;
             height: .6rem;
-            .header-bottom-left, .header-bottom-right{
+            ul {
+                width: 68.75%;
+                text-align: center;
                 display: inline-block;
                 height: .4rem;
-                width: 34.375%;
-                text-align: center;
+            }
+            .header-bottom-left, .header-bottom-right{
+                display: inline-block;
+                height: 98%;
+                width: 50%;
                 line-height: .4rem;
-                border: 1px solid #FFFFFF;
                 color: #FFFFFF;
+                border: 1px solid #FFFFFF;
+                box-sizing: border-box;
             }
             .header-bottom-left {
                 color: @baseColor;
