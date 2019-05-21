@@ -1,92 +1,94 @@
 <template>
-    <div class="list">
-        <div class="hot-city">
-            <div class="title">热门城市</div>
+    <div class="list" ref="wrapper">
+        <div class="wrapper">
             <div class="hot-city">
-                <ul>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                    <li>广州</li>
-                </ul></div>
+                <div class="title">热门城市</div>
+                <div class="hot-city">
+                    <ul>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                        <li>广州</li>
+                    </ul></div>
+            </div>
+            <div class="sort-A">
+                <div class="title">A</div>
+                <div>
+                    <ul>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                    </ul></div>
+            </div>
+            <div class="sort-A">
+                <div class="title">A</div>
+                <div>
+                    <ul>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                    </ul></div>
+            </div>
+            <div class="sort-A">
+                <div class="title">A</div>
+                <div>
+                    <ul>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                    </ul></div>
+            </div>
+            <div class="sort-A">
+                <div class="title">A</div>
+                <div>
+                    <ul>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                        <li>阿里</li>
+                    </ul></div>
+            </div>
         </div>
-        <div class="sort-A">
-            <div class="title">A</div>
-            <div>
-                <ul>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                </ul></div>
-        </div>
-        <div class="sort-A">
-            <div class="title">A</div>
-            <div>
-                <ul>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                </ul></div>
-        </div>
-        <div class="sort-A">
-            <div class="title">A</div>
-            <div>
-                <ul>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                </ul></div>
-        </div>
-        <div class="sort-A">
-            <div class="title">A</div>
-            <div>
-                <ul>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                    <li>阿里</li>
-                </ul></div>
-        </div>
-
     </div>
 </template>
 
 <script>
+    import Bscroll from 'better-scroll'
     export default {
         name: 'List',
-        components: {
-
+        mounted() {
+            this.scroll = new Bscroll(this.$refs.wrapper)
         }
     }
 </script>
