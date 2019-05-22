@@ -30,7 +30,7 @@
         line-height: .76rem;
         background-color: @baseColor;
         display: flex;
-        color: white;
+        color: #FFFFFF;
         overflow: hidden;
 
         .header-left {
