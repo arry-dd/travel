@@ -1,7 +1,7 @@
 <template>
     <div id="recommend">
         <div class="recommend-like"><span class="iconfont iconfont-love">&#xe85c;</span>猜你喜欢 </div>
-        <ul v-for="item in recommendList" :key="item.id">
+        <router-link v-for="item in recommendList" :key="item.id" tag="ul" :to="'/detail/'+item.id">
             <li class="recommend-info">
                 <div class="recommend-img">
                     <img class="info-img" :src="item.imgUrl">
@@ -30,7 +30,7 @@
                     <div class="info-desc"><p>{{item.desc}}</p></div>
                 </div>
             </li>
-        </ul>
+        </router-link>
         <div class="recommend-more"><a>查看所有产品</a></div>
     </div>
 </template>

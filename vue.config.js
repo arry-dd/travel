@@ -11,6 +11,8 @@ module.exports = {
             .set('style', resolve('src/assets/styles'))
             .set('src', resolve('src'))
             .set('city', resolve('src/components/city'))
+            .set('detail', resolve('src/components/detail'))
+            .set('common', resolve('src/components/common'))
     },
     devServer: {
         proxy: {
