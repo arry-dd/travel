@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="abs" v-show="showAbs"><span class="iconfont abs-back">&#xe624;</span></div>
+        <router-link tag="div" to="/" class="abs" v-show="showAbs"><span class="iconfont abs-back">&#xe624;</span></router-link>
         <div class="header" v-show="!showAbs" :style="headerStyle">
-            <div class="header-left"><span class="iconfont back">&#xe624;</span></div>
+            <router-link tag="div" to="/" class="header-left"><span class="iconfont back">&#xe624;</span></router-link>
             景点详情
         </div>
     </div>
@@ -22,6 +22,7 @@
         },
         methods: {
             changeShowAbs() {
+                console.log('1111');
                 let top = document.documentElement.scrollTop;
                 if (top > 60) {
                     this.showAbs = false;
@@ -34,6 +35,9 @@
         },
         activated() {
             window.addEventListener('scroll', this.changeShowAbs)
+        },
+        deactivated() {
+            window.removeEventListener('scroll', this.changeShowAbs)
         }
     }
 </script>
