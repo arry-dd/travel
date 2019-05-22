@@ -13,24 +13,30 @@
         data() {
             return {
                 textValue: '',
-                cityList: []
+                cityList: [],
+                timer: null
             }
         },
         props: ['cities'],
         watch: {
             textValue: function (newVal) {
-                this.cityList = [];
-                for (let i in this.cities) {
-                    this.cities[i].forEach((val) => {
-                        if(this.textValue) {
-                            if(val.spell.indexOf(newVal) != -1 ) {
-                                this.cityList.push(val);
-                            }else if(val.name.indexOf(newVal) != -1) {
-                                this.cityList.push(val);
-                            }
-                        }
-                    })
+                if(this.timer) {
+                    clearTimeout(this.timer)
                 }
+                this.timer = setTimeout(()=>{
+                    this.cityList = [];
+                    for (let i in this.cities) {
+                        this.cities[i].forEach((val) => {
+                            if(this.textValue) {
+                                if(val.spell.indexOf(newVal) != -1 ) {
+                                    this.cityList.push(val);
+                                }else if(val.name.indexOf(newVal) != -1) {
+                                    this.cityList.push(val);
+                                }
+                            }
+                        })
+                    }
+                },100)
             }
         } //计算text中的值是否与城市数据匹配
     }
