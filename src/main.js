@@ -23,10 +23,13 @@ import 'style/border.css'
 import fastClick from 'fastclick';
 fastClick.attach(document.body);
 
+//引入vuex
+import store from 'src/store/index'
 //阻止启动生产消息
 Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
-  router: routerObj
+  router: routerObj,
+  store
 }).$mount('#app')

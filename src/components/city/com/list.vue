@@ -5,7 +5,7 @@
                 <div class="title">热门城市</div>
                 <div class="hot-city">
                     <ul>
-                        <li v-for="value in hotCities" :key="value.id">{{value.name}}</li>
+                        <li v-for="value in hotCities" :key="value.id" @click="handleSkip(value.name)">{{value.name}}</li>
                     </ul></div>
             </div>
             <alphabet :cities="cities" @setAl="getAl"></alphabet>
@@ -13,8 +13,8 @@
                 <div class="sort-A" v-for="(val,key) in cities" :key="key" :ref="key">
                     <div class="title">{{key}}</div>
                     <div>
-                        <ul v-for="(item,i) in val" :key="i">
-                            <li>{{item.name}}</li>
+                        <ul>
+                            <li  v-for="(item,i) in val" :key="i" @click="handleSkip(item.name)">{{item.name}}</li>
                         </ul>
                     </div>
                 </div>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+    import { mapMutations } from 'vuex'
     import Bscroll from 'better-scroll'
     import Alphabet from 'city/com/alphabet'
     import axios from 'axios'
@@ -51,7 +52,12 @@
             },
             getAl(data) {
                 this.al = data;
-            }
+            },
+            handleSkip(city) {
+                this.changeCity(city);
+                this.$router.push('/');
+            },//处理热门城市切换
+            ...mapMutations(['changeCity'])
         },
         data() {
             return {

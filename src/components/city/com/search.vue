@@ -2,7 +2,7 @@
     <div class="search">
         <input type="text" placeholder="输入城市名或拼音" v-model="textValue">
         <ul>
-            <li v-for="item in cityList" :key="item.id">{{item.name}}</li>
+            <li v-for="item in cityList" :key="item.id" @click="handleSkip(item.name)">{{item.name}}</li>
         </ul>
     </div>
 </template>
@@ -18,6 +18,12 @@
             }
         },
         props: ['cities'],
+        methods: {
+            handleSkip(city) {
+                this.$store.commit('changeCity',city);
+                this.$router.push('/');
+            }//处理搜索城市切换
+        },
         watch: {
             textValue: function (newVal) {
                 if(this.timer) {
