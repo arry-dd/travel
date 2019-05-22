@@ -9,7 +9,6 @@
                     </ul></div>
             </div>
             <alphabet :cities="cities" @setAl="getAl"></alphabet>
-<!--            <area1 :cities="cities" :al="al"></area1>-->
             <div>
                 <div class="sort-A" v-for="(val,key) in cities" :key="key" :ref="key">
                     <div class="title">{{key}}</div>
@@ -35,7 +34,7 @@
             this.getCityData();
         },
         components: {
-            Alphabet,
+            Alphabet
         },
         methods: {
             getCityData() {
@@ -47,6 +46,7 @@
                     const data = ret.data.data;
                     this.hotCities = data.hotCities;
                     this.cities = data.cities;
+                    this.$emit('sendCity',this.cities)
                 }
             },
             getAl(data) {
@@ -64,6 +64,7 @@
         al() {
             if(this.al) {
                 this.scroll.scrollToElement(this.$refs[this.al][0])
+                //按字母跳转
             }
         }
     }
@@ -76,7 +77,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        top: 1.44rem;
+        top: 2.14rem;
         overflow: hidden;
         .title {
             height: .7rem;
