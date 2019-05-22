@@ -1,12 +1,12 @@
 <template>
     <div>
-        <div class="banner">
+        <div class="banner" @click="galleryShow">
             <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1603/3b/3bd311262ee06d8c90.img.jpg_600x330_cd2e3bf7.jpg">
             <div class="banner-info">
                 <div class="banner-desc">广州长隆旅游度假区(AAAAA景区)</div>
                 <div class="banner-icon"> <span class="iconfont iconfont-arrows">&#xe64a;</span>16</div>
             </div>
-            <gallery></gallery>
+            <gallery v-show="galleryShowFlag" @close="galleryClose"></gallery>
         </div>
     </div>
 </template>
@@ -17,6 +17,19 @@
         name: 'Banner',
         components: {
             Gallery
+        },
+        data() {
+            return {
+                galleryShowFlag: false
+            }
+        },
+        methods: {
+            galleryShow() {
+                this.galleryShowFlag = true;
+            },
+            galleryClose() {
+                this.galleryShowFlag = false;
+            }
         }
     }
 </script>

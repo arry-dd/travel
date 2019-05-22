@@ -1,5 +1,5 @@
 <template>
-    <div class="gallery">
+    <div class="gallery" @click.stop="galleryClose">
         <div class="gallery-swiper">
             <swiper :options="swiperOption">
                 <swiper-slide>
@@ -27,8 +27,15 @@
             return {
                 swiperOption: {
                     pagination : '.swiper-pagination',
-                    paginationType : 'fraction'
+                    paginationType : 'fraction',
+                    observer:true,
+                    observeParents:true,
                 }
+            }
+        },
+        methods: {
+            galleryClose() {
+                this.$emit('close');
             }
         }
     }
